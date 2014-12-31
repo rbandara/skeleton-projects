@@ -1,15 +1,21 @@
 package controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import service.HelloService;
 
 
 @RestController
-class Controller {
+@RequestMapping("hello")
+class HelloController {
 
-    @RequestMapping("/hello/{name}")
+    @Autowired
+    private HelloService helloService;
+
+    @RequestMapping("/{name}")
     String hello(@PathVariable String name) {
-        return "Hello, " + name + "!";
+        return helloService.sayHello(name);
     }
 }

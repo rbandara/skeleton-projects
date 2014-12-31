@@ -1,0 +1,1 @@
+This is a sample project to start with Spring REST projects.
