@@ -1,0 +1,15 @@
+# files
+.DS_Store
+.idea
+.git
+.class
+*.iml
+.classpath
+.project
+
+# folders
+target
+.idea/*.*
+.svn
+.settings
+
